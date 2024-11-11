@@ -8,7 +8,7 @@ public class FVCalc {
 		
 		double futureValue = balance * Math.pow(1 + interest, n);
 		
-		System.out.println("After " + n + " years, $" + balance + " saved at " + (interest * 100) + "% will yield $" + (int) futureValue);
+		System.out.println("After " + n + " years, a $" + balance + " saved at " + (interest * 100) + "% will yield $" + (int) futureValue);
     }
 
 
