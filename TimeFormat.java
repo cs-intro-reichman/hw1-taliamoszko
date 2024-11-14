@@ -14,10 +14,7 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
 
- 		 if (hours == 24 && minutes == 0) {
-            System.out.println("0:00 AM");
-            return;
-		 }
+ 		 
 		 if (hours == 0 && minutes == 0) {
             System.out.println("0:00 AM");
             return;
@@ -35,3 +32,4 @@ public class TimeFormat {
         System.out.printf("%d:%02d %s\n", twelveHourFormat, minutes, period);
     }
 }
+
