@@ -14,15 +14,21 @@ public class TimeFormat {
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         // Replace this comment with the rest of your code
 
+ 		 if (hours == 24 && minutes == 0) {
+            System.out.println("0:00 AM");
+            return;
+		 }
+		
 		 String period = (hours < 12) ? "AM" : "PM";
         
         // Convert to 12-hour format
-        int twelveHourFormat = hours % 12;
+        
+		int twelveHourFormat = hours % 12;
         if (twelveHourFormat == 0) {
             twelveHourFormat = 12; // Handle midnight and noon
         }
         
         // Print formatted time with appropriate leading zero for minutes
         System.out.printf("%d:%02d %s\n", twelveHourFormat, minutes, period);
-		}
-	}
+    }
+}
