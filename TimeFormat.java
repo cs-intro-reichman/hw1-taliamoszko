@@ -18,17 +18,20 @@ public class TimeFormat {
             System.out.println("0:00 AM");
             return;
 		 }
+		 if (hours == 0 && minutes == 0) {
+            System.out.println("0:00 AM");
+            return;
+        }
 		
 		 String period = (hours < 12) ? "AM" : "PM";
         
-        // Convert to 12-hour format
         
 		int twelveHourFormat = hours % 12;
         if (twelveHourFormat == 0) {
-            twelveHourFormat = 12; // Handle midnight and noon
+            twelveHourFormat = 12; 
         }
         
-        // Print formatted time with appropriate leading zero for minutes
+       
         System.out.printf("%d:%02d %s\n", twelveHourFormat, minutes, period);
     }
 }
